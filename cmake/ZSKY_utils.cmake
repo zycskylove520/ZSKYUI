@@ -1,4 +1,4 @@
-# 杂项函数文件模块
+# cmake函数以及宏文件模块，开发者可自定义添加
 
 # 检查并设置当前运行平台函数
 function(ZSKY_FUNC_CHECK_AND_SET_PLATDORM)

@@ -1,5 +1,5 @@
 // 该文件为ZSKYUI的生命周期文件
-// 用户可自定义修改该类，该类在main.cpp中被调用
+// 用户可自定义修改该类，该类在各个不同的渲染后端的main.cpp中被调用
 
 #include <imgui.h>
 class ZSKYUI final

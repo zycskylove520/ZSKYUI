@@ -6,6 +6,7 @@ set(ZSKY_3RDPARTY_ALL_INCLUDE_DIR)   # 所有第三方库的包含目录
 set(ZSKY_3RDPARTY_ALL_LIB_DIR)       # 所有第三方库的库目录
 set(ZSKY_3RDPARTY_ALL_LIBRARIES)     # 所有第三方库的静态库
 set(ZSKY_3RDPARTY_ALL_DLL)           # 所有第三方库的动态库
+set(ZSKY_3RDPARTY_ALL_SOURCE)        # 所有第三方库的源文件，如果第三方库是源代码的话
 
 # SDL2库
 if(${USE_SDL2})
@@ -79,7 +80,12 @@ endif()
 
 # freetype库
 include(${CMAKE_CURRENT_LIST_DIR}/3rdparty/freetype.cmake)
-list(APPEND ZSKY_3RDPARTY_ALL_INCLUDE_DIR "${ZSKY_3RDPARTY_freetype_INCLUDE_DIR}")  
+list(APPEND ZSKY_3RDPARTY_ALL_INCLUDE_DIR "${ZSKY_3RDPARTY_freetype_INCLUDE_DIR}")
 list(APPEND ZSKY_3RDPARTY_ALL_LIB_DIR "${ZSKY_3RDPARTY_freetype_LIB_DIR}")
 list(APPEND ZSKY_3RDPARTY_ALL_LIBRARIES "${ZSKY_3RDPARTY_freetype_LIBRARIES}")
 list(APPEND ZSKY_3RDPARTY_ALL_DLL "${ZSKY_3RDPARTY_freetype_DLL}")
+
+# 以下示例教导如何添加源代码版本的第三方库
+#include(${CMAKE_CURRENT_LIST_DIR}/3rdparty/SSS.cmake)    # 假设该第三方库名为SSS
+#list(APPEND ZSKY_3RDPARTY_ALL_INCLUDE_DIR "${ZSKY_3RDPARTY_SSS_INCLUDE_DIR}")  # 添加SSS库的头文件路径
+#list(APPEND ZSKY_3RDPARTY_ALL_SOURCE "${ZSKY_3RDPARTY_SSS_SOURCE}")    # 添加SSS库的源代码

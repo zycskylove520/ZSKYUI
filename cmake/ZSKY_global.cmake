@@ -3,7 +3,7 @@
 include(${CMAKE_CURRENT_LIST_DIR}/ZSKY_utils.cmake)
 
 ZSKY_FUNC_CHECK_AND_SET_PLATDORM()  # 设置编译平台
-option(ZSKY_BUILD_MODE "")
+option(ZSKY_BUILD_MODE "" OFF)
 
 # 设置C++版本
 if (CMAKE_VERSION VERSION_GREATER 3.12)  
