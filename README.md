@@ -4,6 +4,7 @@
 ### 目前该项目仅实现了Windows平台，但通过阅读各个模块的README和代码中的注释，任何人都可以很容易的扩展到其他平台。未来ZSYUI也会实现并支持其他平台。
 
 ****以下是目前支持的Dear Imgui的后端组合****：
+
 Windows：
 - GLFW + OpenGL2
 - GLFW + OpenGL3
@@ -33,7 +34,8 @@ Android：
 本项目自带SDL2和Vulkan等一系列库，无需开发者重新下载，如果有需要可自行更新库。
 
 1. 进入cmake目录下的****ZSKY_global.cmake****文件中，修改需要的后端组合，注意图形库和渲染后端每种只能启用一个。启用方法为把需要的option修改为ON。如果使用Win32作为图像库，需要到**ZSKY_3rdparty_manager.cmake**中修改DirectX库的Windows Kits的路径！
-2. 进入out/build目录下，使用cmake进行编译和install，然后在out/install中可获得安装的程序。如果使用visual studio打开，可使用visual studio进行编译。
+
+1. 2. 进入out/build目录下，使用cmake进行编译和install，然后在out/install中可获得安装的程序。如果使用visual studio打开，可使用visual studio进行编译。
 
 修改项目名或具体cmake编译指令，以及定制化根CMakeLists.txt请参阅该目录下的CMakeLists.txt中的注释。
 
