@@ -35,7 +35,7 @@ Android：
 
 1. 进入cmake目录下的****ZSKY_global.cmake****文件中，修改需要的后端组合，注意图形库和渲染后端每种只能启用一个。启用方法为把需要的option修改为ON。如果使用Win32作为图像库，需要到**ZSKY_3rdparty_manager.cmake**中修改DirectX库的Windows Kits的路径！
 
-1. 2. 进入out/build目录下，使用cmake进行编译和install，然后在out/install中可获得安装的程序。如果使用visual studio打开，可使用visual studio进行编译。
+2. 进入out/build目录下，使用cmake进行编译和install，然后在out/install中可获得安装的程序。如果使用visual studio打开，可使用visual studio进行编译。
 
 修改项目名或具体cmake编译指令，以及定制化根CMakeLists.txt请参阅该目录下的CMakeLists.txt中的注释。
 
